@@ -39,16 +39,10 @@ const Cart: React.FC = () => {
   const { increment, decrement, products } = useCart();
 
   function handleIncrement(id: string): void {
-    products.map((product) => {
-      if(product.id===id) product.quantity++;
-    });
     increment(id);
   }
 
   function handleDecrement(id: string): void {
-    products.map((product) => {
-      if(product.id===id && product.quantity) product.quantity--;
-    });
     decrement(id);
   }
 
